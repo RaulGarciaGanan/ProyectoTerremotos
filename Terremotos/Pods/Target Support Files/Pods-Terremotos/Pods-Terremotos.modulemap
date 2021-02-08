@@ -1,0 +1,6 @@
+framework module Pods_Terremotos {
+  umbrella header "Pods-Terremotos-umbrella.h"
+
+  export *
+  module * { export * }
+}

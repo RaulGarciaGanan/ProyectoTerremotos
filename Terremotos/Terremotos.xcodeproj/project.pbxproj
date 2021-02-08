@@ -11,9 +11,13 @@
 		C35B539725CDBD2500BE9D74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35B539625CDBD2500BE9D74 /* ContentView.swift */; };
 		C35B539925CDBD2600BE9D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B539825CDBD2600BE9D74 /* Assets.xcassets */; };
 		C35B539C25CDBD2600BE9D74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B539B25CDBD2600BE9D74 /* Preview Assets.xcassets */; };
+		CC19D899188A28B0BF455A83 /* Pods_Terremotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A81182CE30ACB06CDCC8E /* Pods_Terremotos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D4A81182CE30ACB06CDCC8E /* Pods_Terremotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Terremotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E7B4DFAE590231DCA02ED83 /* Pods-Terremotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terremotos.debug.xcconfig"; path = "Target Support Files/Pods-Terremotos/Pods-Terremotos.debug.xcconfig"; sourceTree = "<group>"; };
+		ABBF3CC901522A5D4F4CAF19 /* Pods-Terremotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terremotos.release.xcconfig"; path = "Target Support Files/Pods-Terremotos/Pods-Terremotos.release.xcconfig"; sourceTree = "<group>"; };
 		C35B539125CDBD2500BE9D74 /* Terremotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terremotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35B539425CDBD2500BE9D74 /* TerremotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerremotosApp.swift; sourceTree = "<group>"; };
 		C35B539625CDBD2500BE9D74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,17 +31,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC19D899188A28B0BF455A83 /* Pods_Terremotos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A0A279F8CD2FC156D113E05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E7B4DFAE590231DCA02ED83 /* Pods-Terremotos.debug.xcconfig */,
+				ABBF3CC901522A5D4F4CAF19 /* Pods-Terremotos.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA780DCB4BB4BF16F4DF55D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A81182CE30ACB06CDCC8E /* Pods_Terremotos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C35B538825CDBD2500BE9D74 = {
 			isa = PBXGroup;
 			children = (
 				C35B539325CDBD2500BE9D74 /* Terremotos */,
 				C35B539225CDBD2500BE9D74 /* Products */,
+				8A0A279F8CD2FC156D113E05 /* Pods */,
+				BA780DCB4BB4BF16F4DF55D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C35B53A025CDBD2600BE9D74 /* Build configuration list for PBXNativeTarget "Terremotos" */;
 			buildPhases = (
+				991C302564450EBD13BC96C0 /* [CP] Check Pods Manifest.lock */,
 				C35B538D25CDBD2500BE9D74 /* Sources */,
 				C35B538E25CDBD2500BE9D74 /* Frameworks */,
 				C35B538F25CDBD2500BE9D74 /* Resources */,
+				BB52170996EB585CEF2B619B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		991C302564450EBD13BC96C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Terremotos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB52170996EB585CEF2B619B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Terremotos/Pods-Terremotos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Terremotos/Pods-Terremotos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Terremotos/Pods-Terremotos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C35B538D25CDBD2500BE9D74 /* Sources */ = {
@@ -264,6 +333,7 @@
 		};
 		C35B53A125CDBD2600BE9D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7B4DFAE590231DCA02ED83 /* Pods-Terremotos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -285,6 +355,7 @@
 		};
 		C35B53A225CDBD2600BE9D74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABBF3CC901522A5D4F4CAF19 /* Pods-Terremotos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
