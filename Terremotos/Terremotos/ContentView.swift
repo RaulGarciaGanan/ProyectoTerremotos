@@ -6,16 +6,30 @@
 //
 
 import SwiftUI
+import SwiftyJSON
+import Alamofire
+import SwiftyXMLParser
+
+
 
 struct ContentView: View {
+    
+    @ObservedObject var vm = ViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
+        
+        Text(vm.ciudad)
             .padding()
+        
+            
+            
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }
+

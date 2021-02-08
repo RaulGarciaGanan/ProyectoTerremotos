@@ -1,16 +1,32 @@
 PODS:
+  - Alamofire (5.4.1)
   - SwiftyJSON (4.3.0)
+  - SwiftyXMLParser (5.1.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - SwiftyJSON (~> 4.0)
+  - SwiftyXMLParser (from `https://github.com/yahoojapan/SwiftyXMLParser.git`)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - SwiftyJSON
 
-SPEC CHECKSUMS:
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+EXTERNAL SOURCES:
+  SwiftyXMLParser:
+    :git: https://github.com/yahoojapan/SwiftyXMLParser.git
 
-PODFILE CHECKSUM: 268ce2ccac6fc7dbe9a384d72ff0beabcee85ca0
+CHECKOUT OPTIONS:
+  SwiftyXMLParser:
+    :commit: ec7f183642adf429babd867d1a38c5c6912408ba
+    :git: https://github.com/yahoojapan/SwiftyXMLParser.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwiftyXMLParser: 23b5a9321a8adf72aae29046ea58c3d097b4ac17
+
+PODFILE CHECKSUM: 3b0da8b99f87ad006e01673b89ac168709aeca09
 
 COCOAPODS: 1.8.4

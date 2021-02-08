@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31FD9F025D1B2EF003276DC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FD9EF25D1B2EF003276DC /* ViewModel.swift */; };
 		C35B539525CDBD2500BE9D74 /* TerremotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35B539425CDBD2500BE9D74 /* TerremotosApp.swift */; };
 		C35B539725CDBD2500BE9D74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35B539625CDBD2500BE9D74 /* ContentView.swift */; };
 		C35B539925CDBD2600BE9D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35B539825CDBD2600BE9D74 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		1D4A81182CE30ACB06CDCC8E /* Pods_Terremotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Terremotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E7B4DFAE590231DCA02ED83 /* Pods-Terremotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terremotos.debug.xcconfig"; path = "Target Support Files/Pods-Terremotos/Pods-Terremotos.debug.xcconfig"; sourceTree = "<group>"; };
 		ABBF3CC901522A5D4F4CAF19 /* Pods-Terremotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Terremotos.release.xcconfig"; path = "Target Support Files/Pods-Terremotos/Pods-Terremotos.release.xcconfig"; sourceTree = "<group>"; };
+		C31FD9EF25D1B2EF003276DC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C35B539125CDBD2500BE9D74 /* Terremotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Terremotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35B539425CDBD2500BE9D74 /* TerremotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerremotosApp.swift; sourceTree = "<group>"; };
 		C35B539625CDBD2500BE9D74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,7 +46,6 @@
 				2E7B4DFAE590231DCA02ED83 /* Pods-Terremotos.debug.xcconfig */,
 				ABBF3CC901522A5D4F4CAF19 /* Pods-Terremotos.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C35B539425CDBD2500BE9D74 /* TerremotosApp.swift */,
+				C31FD9EF25D1B2EF003276DC /* ViewModel.swift */,
 				C35B539625CDBD2500BE9D74 /* ContentView.swift */,
 				C35B539825CDBD2600BE9D74 /* Assets.xcassets */,
 				C35B539D25CDBD2600BE9D74 /* Info.plist */,
@@ -208,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35B539725CDBD2500BE9D74 /* ContentView.swift in Sources */,
+				C31FD9F025D1B2EF003276DC /* ViewModel.swift in Sources */,
 				C35B539525CDBD2500BE9D74 /* TerremotosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
