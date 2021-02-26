@@ -11,37 +11,46 @@ import Alamofire
 import SwiftyXMLParser
 
 class ViewModel: ObservableObject {
-    @Published var terremotos: [terremotosData]
-    init(terremotos: [terremotosData]) {
-        self.terremotos: [terremotosData]
+    @Published var terremotos = [terremotosData]()
+    init() {
+        cargarDatos()
+        
     }
     
-    
+    func cargarDatos(){
+        AF.request(url, method: .get).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                //let json = JSON(value)
+                //print("JSON: \(data)")
+            
+                self.terremotos = []
+                
+                let data = JSON(value)
+                for feature in data["features"].arrayValue{
+                    let place = feature["properties"]["place"].stringValue
+                    let magnitud = feature["properties"]["mag"].doubleValue
+                    let terremoto: terremotosData = terremotosData(ciudad: place, magnitud: magnitud)
+                    self.terremotos.append(terremoto)
+                    
+                }
+                
+                //for ciudadJSON in ciudadJSON{
+                //  print(ciudadJSON)
+                //}
+                //self.terremotos.append(ciudadJSON)
+                //terremotos[0] = data["place"].arrayValue
+            case .failure(let error):
+               print(error)
+            }
+        }
+    }
 }
 
 let url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
 
-func cargarDatos(){
-    print("Inicio")
-    AF.request(url, method: .get).validate().responseJSON { response in
-        switch response.result {
-        case .success(let value):
-            //let json = JSON(value)
-            //print("JSON: \(data)")
-            let data = JSON(value)
-            let ciudadJSON = data["place"].arrayValue
-            for ciudadJSON in ciudadJSON{
-                print(ciudadJSON)
-            }
-        case .failure(let error):
-           print(error)
-        }
-    }
-    print("Fin")
-    
-    
-}
 
+/*
 struct terremotosData {
     var ciudad: String
     var url: String
@@ -63,4 +72,9 @@ struct terremotosData {
         self.tsunami = tsunami
         self.profundidad = profundidad
     }
+}*/
+
+struct terremotosData {
+    var ciudad: String
+    var magnitud: Double
 }

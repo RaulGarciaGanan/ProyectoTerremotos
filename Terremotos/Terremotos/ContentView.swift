@@ -16,13 +16,23 @@ struct ContentView: View {
     
     @ObservedObject var vm = ViewModel()
     
+    
     var body: some View {
         
-        Text(vm.ciudad)
-            .padding()
-        
+        VStack {
+            
+            GroupBox(label: Text("Terremoto1")) {
+                //
+                if(vm.terremotos.count > 0) {
+                Text(vm.terremotos[0].ciudad)
+                    Text(String(vm.terremotos[0].magnitud))
+                }
+            }
             
             
+        }.onAppear(perform: {
+            vm.cargarDatos()
+        })
     }
 }
 
@@ -30,6 +40,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         
+        
     }
 }
-
